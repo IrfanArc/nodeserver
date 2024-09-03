@@ -5,7 +5,7 @@ FROM node:12.22.9
 WORKDIR /app
 
 # Copy the server application files from the local directory to the container
-COPY /home/irfan/Desktop/dice/project/git/nodeserver/server/express-checksum /app
+COPY . /app
 
 # Install dependencies
 RUN npm install crypto@^1.0.1 express@^4.19.2 fs-extra@^9.1.0
@@ -14,4 +14,4 @@ RUN npm install crypto@^1.0.1 express@^4.19.2 fs-extra@^9.1.0
 EXPOSE 3000
 
 # Specify the command to run your application
-CMD ["node", "index.js"]
+CMD ["node", "server.js"]
