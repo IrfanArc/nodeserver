@@ -5,11 +5,11 @@ const path = require('path');
 
 const app = express();
 const PORT = 3000;
-const FILE_PATH = path.join(__dirname, 'serverdata', 'randomData.txt');
+const FILE_PATH = path.join("/", 'serverdata', 'randomData.txt');
 
 // Middleware to ensure /serverdata directory exists
 app.use(async (req, res, next) => {
-  await fs.ensureDir(path.join(__dirname, 'serverdata'));
+  await fs.ensureDir(path.join('/', 'serverdata'));
   next();
 });
 
