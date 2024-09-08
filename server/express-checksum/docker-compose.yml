@@ -1,21 +1,15 @@
-version: '3.8'
-
 services:
   server:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    build: .
     volumes:
       - servervol:/serverdata
     networks:
-      - app_network
+      - my_shared_network
     ports:
       - "3002:3002"
-
+networks:
+  my_shared_network:
+    driver: bridge
+    external: true
 volumes:
   servervol:
-
-networks:
-  app_network:
-    external: true
-
