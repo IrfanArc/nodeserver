@@ -7,8 +7,15 @@ services:
       dockerfile: Dockerfile
     volumes:
       - servervol:/serverdata
+    networks:
+      - app_network
     ports:
-      - "3000:3000"
+      - "3002:3002"
 
 volumes:
   servervol:
+
+networks:
+  app_network:
+    external: true
+

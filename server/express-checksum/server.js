@@ -4,7 +4,7 @@ const fs = require('fs-extra');
 const path = require('path');
 
 const app = express();
-const PORT = 3000;
+const PORT = 3002;
 const FILE_PATH = path.join("/", 'serverdata', 'randomData.txt');
 
 // Middleware to ensure /serverdata directory exists
