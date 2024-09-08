@@ -1,7 +1,7 @@
 #A Simple Node Server for the DiceCamp Final Project 
 
 ##Overview:
-This is a very simple web app written in Node.js using express framework. By default, it runs on port 3002.
+This is a very simple web app written in Node.js using express framework. By default, it runs on port 3002. Dockerfile and Docker-compose files are part of this repository.
 Here's an example of caling it via Curl:
 curl -v -X GET http://localhost:3002/generate-file
 When this url is hit, it generates a random bse64 encoded text file at /serverdata and returns the content of the file along with its checksum (SHA256) in X-Checksum header  
